@@ -1,0 +1,19 @@
+FROM --platform=linux/amd64 ubuntu:20.04
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y vim less man
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential autoconf \
+        libtool \
+        git \
+        bison \
+        flex \
+        python3 \
+        python3-pip \
+        wget 
+
+
+ADD . /repo
+WORKDIR /repo
+RUN autoreconf -i
+RUN ./configure --disable-maintainer-mode
+RUN make -j8
