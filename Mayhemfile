@@ -1,6 +1,5 @@
-project: rnshah9/jq
+project: jq
 target: jq
-tests: null
 
 cmds:
   - cmd: /repo/jq . @@
