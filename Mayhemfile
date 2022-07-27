@@ -2,4 +2,4 @@ project: jq
 target: jq
 
 cmds:
-  - cmd: /repo/jq . @@
+  - cmd: /install/bin/jq . @@
