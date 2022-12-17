@@ -59,7 +59,8 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-          - mayhem/Mayhemfile
+          - mayhem/Mayhemfile_jq
+          - mayhem/Mayhemfile_jq_set_colors
 
     steps:
       - uses: actions/checkout@v3

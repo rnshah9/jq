@@ -1,0 +1,6 @@
+project: jq
+target: jq-set-colors
+
+cmds:
+  - cmd: /fuzz_jq_set_colors
+    libfuzzer: true
